@@ -72,6 +72,7 @@ namespace DatabaseProje
 
         private void araBtn_Click(object sender, EventArgs e)
         {
+            /*
             connect.Open();
             NpgsqlCommand command1 = new NpgsqlCommand("SELECT * from model_bul('@p1%')", connect);
             command1.Parameters.AddWithValue("@p1", TxtModelAd.Text);
@@ -81,6 +82,13 @@ namespace DatabaseProje
             dataGridView1.DataSource = ds.Tables[0];
             connect.Close();
             MessageBox.Show("Arama işlemi sona erdi.");
+            */
+            connect.Open();
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter("select * from \"model\" where \"modelAd\" like '%" + TxtModelAd.Text + "%'", connect);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            connect.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -92,6 +100,12 @@ namespace DatabaseProje
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
             connect.Close();
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            //System.Windows.Forms.Application.Exit();
         }
     }
 }

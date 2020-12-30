@@ -29,8 +29,8 @@ namespace DatabaseProje
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(model));
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.resimPB = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.TxtKasaTipi = new System.Windows.Forms.TextBox();
             this.TxtVites = new System.Windows.Forms.TextBox();
@@ -47,7 +47,7 @@ namespace DatabaseProje
             this.modelIdLbl = new System.Windows.Forms.Label();
             this.aracIdLbl = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.resimPB)).BeginInit();
+            this.backBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,17 +55,9 @@ namespace DatabaseProje
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // resimPB
-            // 
-            this.resimPB.Location = new System.Drawing.Point(1, 2);
-            this.resimPB.Name = "resimPB";
-            this.resimPB.Size = new System.Drawing.Size(442, 338);
-            this.resimPB.TabIndex = 171;
-            this.resimPB.TabStop = false;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1299, 300);
+            this.button1.Location = new System.Drawing.Point(841, 298);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(386, 38);
             this.button1.TabIndex = 170;
@@ -77,7 +69,7 @@ namespace DatabaseProje
             // 
             this.TxtKasaTipi.BackColor = System.Drawing.Color.White;
             this.TxtKasaTipi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtKasaTipi.Location = new System.Drawing.Point(1423, 132);
+            this.TxtKasaTipi.Location = new System.Drawing.Point(965, 130);
             this.TxtKasaTipi.Name = "TxtKasaTipi";
             this.TxtKasaTipi.Size = new System.Drawing.Size(235, 20);
             this.TxtKasaTipi.TabIndex = 162;
@@ -86,7 +78,7 @@ namespace DatabaseProje
             // 
             this.TxtVites.BackColor = System.Drawing.Color.White;
             this.TxtVites.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtVites.Location = new System.Drawing.Point(1423, 172);
+            this.TxtVites.Location = new System.Drawing.Point(965, 170);
             this.TxtVites.Name = "TxtVites";
             this.TxtVites.Size = new System.Drawing.Size(235, 20);
             this.TxtVites.TabIndex = 161;
@@ -95,7 +87,7 @@ namespace DatabaseProje
             // 
             this.TxtModelAd.BackColor = System.Drawing.Color.White;
             this.TxtModelAd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtModelAd.Location = new System.Drawing.Point(1423, 90);
+            this.TxtModelAd.Location = new System.Drawing.Point(965, 88);
             this.TxtModelAd.Name = "TxtModelAd";
             this.TxtModelAd.Size = new System.Drawing.Size(235, 20);
             this.TxtModelAd.TabIndex = 160;
@@ -104,7 +96,7 @@ namespace DatabaseProje
             // 
             this.TxtVersiyon.BackColor = System.Drawing.Color.White;
             this.TxtVersiyon.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtVersiyon.Location = new System.Drawing.Point(1423, 51);
+            this.TxtVersiyon.Location = new System.Drawing.Point(965, 49);
             this.TxtVersiyon.Name = "TxtVersiyon";
             this.TxtVersiyon.Size = new System.Drawing.Size(235, 20);
             this.TxtVersiyon.TabIndex = 159;
@@ -113,14 +105,14 @@ namespace DatabaseProje
             // 
             this.TxtModelId.BackColor = System.Drawing.Color.White;
             this.TxtModelId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtModelId.Location = new System.Drawing.Point(1423, 12);
+            this.TxtModelId.Location = new System.Drawing.Point(965, 10);
             this.TxtModelId.Name = "TxtModelId";
             this.TxtModelId.Size = new System.Drawing.Size(235, 20);
             this.TxtModelId.TabIndex = 158;
             // 
             // guncelleBtn
             // 
-            this.guncelleBtn.Location = new System.Drawing.Point(1494, 256);
+            this.guncelleBtn.Location = new System.Drawing.Point(1036, 254);
             this.guncelleBtn.Name = "guncelleBtn";
             this.guncelleBtn.Size = new System.Drawing.Size(191, 38);
             this.guncelleBtn.TabIndex = 152;
@@ -130,7 +122,7 @@ namespace DatabaseProje
             // 
             // silBtn
             // 
-            this.silBtn.Location = new System.Drawing.Point(1496, 212);
+            this.silBtn.Location = new System.Drawing.Point(1038, 210);
             this.silBtn.Name = "silBtn";
             this.silBtn.Size = new System.Drawing.Size(191, 38);
             this.silBtn.TabIndex = 151;
@@ -140,7 +132,7 @@ namespace DatabaseProje
             // 
             // ekleBtn
             // 
-            this.ekleBtn.Location = new System.Drawing.Point(1299, 212);
+            this.ekleBtn.Location = new System.Drawing.Point(841, 210);
             this.ekleBtn.Name = "ekleBtn";
             this.ekleBtn.Size = new System.Drawing.Size(191, 38);
             this.ekleBtn.TabIndex = 150;
@@ -150,7 +142,7 @@ namespace DatabaseProje
             // 
             // araBtn
             // 
-            this.araBtn.Location = new System.Drawing.Point(1299, 256);
+            this.araBtn.Location = new System.Drawing.Point(841, 254);
             this.araBtn.Name = "araBtn";
             this.araBtn.Size = new System.Drawing.Size(191, 38);
             this.araBtn.TabIndex = 149;
@@ -161,7 +153,7 @@ namespace DatabaseProje
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1299, 175);
+            this.label5.Location = new System.Drawing.Point(841, 173);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 20);
             this.label5.TabIndex = 145;
@@ -170,7 +162,7 @@ namespace DatabaseProje
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1299, 135);
+            this.label4.Location = new System.Drawing.Point(841, 133);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 20);
             this.label4.TabIndex = 144;
@@ -179,7 +171,7 @@ namespace DatabaseProje
             // markaLbl
             // 
             this.markaLbl.AutoSize = true;
-            this.markaLbl.Location = new System.Drawing.Point(1299, 93);
+            this.markaLbl.Location = new System.Drawing.Point(841, 91);
             this.markaLbl.Name = "markaLbl";
             this.markaLbl.Size = new System.Drawing.Size(71, 20);
             this.markaLbl.TabIndex = 143;
@@ -188,7 +180,7 @@ namespace DatabaseProje
             // modelIdLbl
             // 
             this.modelIdLbl.AutoSize = true;
-            this.modelIdLbl.Location = new System.Drawing.Point(1299, 54);
+            this.modelIdLbl.Location = new System.Drawing.Point(841, 52);
             this.modelIdLbl.Name = "modelIdLbl";
             this.modelIdLbl.Size = new System.Drawing.Size(63, 20);
             this.modelIdLbl.TabIndex = 142;
@@ -197,7 +189,7 @@ namespace DatabaseProje
             // aracIdLbl
             // 
             this.aracIdLbl.AutoSize = true;
-            this.aracIdLbl.Location = new System.Drawing.Point(1299, 15);
+            this.aracIdLbl.Location = new System.Drawing.Point(841, 13);
             this.aracIdLbl.Name = "aracIdLbl";
             this.aracIdLbl.Size = new System.Drawing.Size(65, 20);
             this.aracIdLbl.TabIndex = 141;
@@ -207,19 +199,33 @@ namespace DatabaseProje
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(449, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(2, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(833, 338);
             this.dataGridView1.TabIndex = 140;
             // 
+            // backBtn
+            // 
+            this.backBtn.BackColor = System.Drawing.Color.Transparent;
+            this.backBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backBtn.BackgroundImage")));
+            this.backBtn.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.backBtn.ForeColor = System.Drawing.Color.Black;
+            this.backBtn.Location = new System.Drawing.Point(1218, 10);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(54, 42);
+            this.backBtn.TabIndex = 171;
+            this.backBtn.Text = "back";
+            this.backBtn.UseVisualStyleBackColor = false;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
             // model
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1714, 342);
-            this.Controls.Add(this.resimPB);
+            this.ClientSize = new System.Drawing.Size(1306, 342);
+            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TxtKasaTipi);
             this.Controls.Add(this.TxtVites);
@@ -239,7 +245,6 @@ namespace DatabaseProje
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "model";
             this.Text = "sifir";
-            ((System.ComponentModel.ISupportInitialize)(this.resimPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -249,7 +254,6 @@ namespace DatabaseProje
         #endregion
 
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.PictureBox resimPB;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox TxtKasaTipi;
         private System.Windows.Forms.TextBox TxtVites;
@@ -267,5 +271,6 @@ namespace DatabaseProje
         private System.Windows.Forms.Label aracIdLbl;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox del;
+        private System.Windows.Forms.Button backBtn;
     }
 }
