@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="BolgeIlIlce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ModelİkinciElİlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MusteriSatisSifir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MusteriSatisİkinciEl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="model.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SifirModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IlanKategoriIkinciEl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="İlceİnfoBayi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="İlceİnfoMusteri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="İnfoBayiBolge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
